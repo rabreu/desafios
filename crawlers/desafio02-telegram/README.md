@@ -1,8 +1,11 @@
-###Comandos
+## Idwall Bot
 
+### Comandos
+
+```
 /NadaPraFazer
-/NadaPraFazer subreddit
-/NadaPraFazer subreddit1;subreddit2;...
+/NadaPraFazer redditsub1;redditsub2;...
 /AboutMe
+```
 
-(@desafio_idwall_bot)[https://telegram.me/desafio_idwall_bot]
+[@desafio_idwall_bot](https://telegram.me/desafio_idwall_bot)
