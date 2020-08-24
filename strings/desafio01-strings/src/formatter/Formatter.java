@@ -7,7 +7,6 @@ public class Formatter {
 	String inputText;
 	Integer limit;
 	
-	
 	public Formatter() {
 
 	}
