@@ -90,9 +90,9 @@ public class Formatter {
 				}
 				
 				// Calculate how many spaces should be alloc'd to reach the line limit
-				int spaceAlloc = limit+1-currentLineSize;
+				int spaceAlloc = limit-currentLineSize+1;
 				
-				if(spaceAlloc < limit+1) {
+				if(spaceAlloc < limit) {
 					int j = 0;
 					int n = 0;
 					int spaceIndex = 0;
