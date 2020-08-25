@@ -1,28 +1,28 @@
 ## Formatter.java e WriteToFile.java
 
-### Métodos
+### Classes
 
-#### Construtores
+#### Formatter.java 
 
-##### Formatter.java
+##### Construtores
 
 ``Formatter()``\
 ``Formatter(String inputText, Integer limit)``
 
-##### WriteToFile.java
-
-``WriteToFile()``
-
-#### Não-construtores
-
-##### Formatter.java
+##### Não-construtores
 
 ``String lineLimit(String inputText, Integer limit)``\
 ``String lineLimit()``\
 ``String lineLimitBlock(String inputText, Integer limit)``\
-``String lineLimitBlock()``\
+``String lineLimitBlock()``
 
-##### WriteToFile.java
+#### WriteToFile.java
+
+##### Construtores
+
+``WriteToFile()``\
+
+##### Não-construtores
 
 ``void write(String text, String filename)``
 
