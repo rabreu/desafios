@@ -55,12 +55,18 @@ public class IdwallBot extends TelegramLongPollingBot {
     }
 
     public void usageMessage(Update update) {
-        this.sendMessage(update.getMessage().getChatId(), "Comandos disponíveis:\n\n/NadaPraFazer\n/NadaPraFazer subreddit\n/NadaPraFazer subreddit1;subreddit2\n/AboutMe");
-
+        this.sendMessage(update.getMessage().getChatId(),
+                "Comandos:\n\n" +
+                "/NadaPraFazer\n" +
+                "/NadaPraFazer subreddit\n" +
+                "/NadaPraFazer subreddit1;subreddit2\n" +
+                "/AboutMe");
     }
 
     public void aboutMessage(Update update) {
-        this.sendMessage(update.getMessage().getChatId(), "https://www.linkedin.com/in/renata89abreu/\nhttps://github.com/rabreu/");
+        this.sendMessage(update.getMessage().getChatId(),
+                "https://www.linkedin.com/in/renata89abreu/\n" +
+                "https://github.com/rabreu/");
     }
 
     public void sendMessage(Long chatId, String msg) {
