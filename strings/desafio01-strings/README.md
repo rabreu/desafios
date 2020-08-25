@@ -9,7 +9,7 @@
 ``Formatter()``\
 ``Formatter(String inputText, Integer limit)``
 
-##### Não-construtores
+##### Métodos
 
 ``String lineLimit(String inputText, Integer limit)``\
 ``String lineLimit()``\
@@ -22,7 +22,7 @@
 
 ``WriteToFile()``
 
-##### Não-construtores
+##### Métodos
 
 ``void write(String text, String filename)``
 
