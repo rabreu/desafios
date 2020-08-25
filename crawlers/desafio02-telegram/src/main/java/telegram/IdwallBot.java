@@ -56,7 +56,7 @@ public class IdwallBot extends TelegramLongPollingBot {
 
     public void usageMessage(Update update) {
         this.sendMessage(update.getMessage().getChatId(),
-                "*Comandos*\n" +
+                "Olá, eu sou um robô e fui criado porque minha criadora está participando do processo seletivo da Idwall e parte do processo inclui a implementação destes *comandos*:\n\n" +
                 "/NadaPraFazer\n" +
                 "/NadaPraFazer _subreddit_\n" +
                 "/NadaPraFazer _subreddit1;subreddit2_\n" +
