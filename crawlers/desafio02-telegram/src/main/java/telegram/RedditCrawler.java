@@ -23,12 +23,12 @@ public class RedditCrawler {
             Elements comments = doc.select("a.bylink.comments"); // .attr("href");
 
             for (int i = 0; i < subreddit.size(); i++) {
-                outputSubs.add(score.get(i).text() + " | " + subreddit.get(i).text() + " | " + title.get(i).text() + "\n");
+                outputSubs.add(score.get(i).text() + " | *" + subreddit.get(i).text() + "* | " + title.get(i).text() + " | ");
                 if (title.get(i).attr("href").charAt(0) == '/')
-                    outputSubs.set(i, outputSubs.get(i) + "https://old.reddit.com" + title.get(i).attr("href") + "\n");
+                    outputSubs.set(i, outputSubs.get(i) + "[thread](" + "https://old.reddit.com" + title.get(i).attr("href") + ") | ");
                 else
-                    outputSubs.set(i, outputSubs.get(i) + title.get(i).attr("href") + "\n");
-                outputSubs.set(i, outputSubs.get(i) + comments.get(i).attr("href"));
+                    outputSubs.set(i, outputSubs.get(i) + "[thread](" + title.get(i).attr("href") + ") | ");
+                outputSubs.set(i, outputSubs.get(i) + "[comments](" + comments.get(i).attr("href") + ")");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -52,13 +52,13 @@ public class RedditCrawler {
 
             for (int i = 0; i < subreddit.size(); i++) {
                 if (subs.contains(subreddit.get(i).text().split("/")[1].toLowerCase())) {
-                    outputSubs.add(score.get(i).text() + " | " + subreddit.get(i).text() + " | " + title.get(i).text() + "\n");
+                    outputSubs.add(score.get(i).text() + " | *" + subreddit.get(i).text() + "* | " + title.get(i).text() + " | ");
                     Integer lastPosition = outputSubs.size()-1;
                     if (title.get(lastPosition).attr("href").charAt(0) == '/')
-                        outputSubs.set(lastPosition, outputSubs.get(lastPosition) + "https://old.reddit.com" + title.get(lastPosition).attr("href") + "\n");
+                        outputSubs.set(lastPosition, outputSubs.get(lastPosition) + "[thread](" + "https://old.reddit.com" + title.get(i).attr("href") + ") | ");
                     else
-                        outputSubs.set(lastPosition, outputSubs.get(lastPosition) + title.get(lastPosition).attr("href") + "\n");
-                    outputSubs.set(lastPosition, outputSubs.get(lastPosition) + comments.get(lastPosition).attr("href"));
+                        outputSubs.set(lastPosition, outputSubs.get(lastPosition) + "[thread](" + title.get(i).attr("href") + ") | ");
+                    outputSubs.set(lastPosition, outputSubs.get(lastPosition) + "[comments](" + comments.get(i).attr("href") + ")");
                 }
             }
         } catch (IOException e) {
