@@ -20,7 +20,7 @@
 
 ##### Construtores
 
-``WriteToFile()``\
+``WriteToFile()``
 
 ##### Não-construtores
 
